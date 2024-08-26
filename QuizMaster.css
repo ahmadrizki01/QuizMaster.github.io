@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.5s ease;
+}
+.logo:hover::after {
+    width: 100%;
+}
+.logo span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.logo:hover span {
+    animation: bounce 0.5s ease infinite alternate;
+}
+@keyframes bounce {
+    to {
+        transform: translateY(-10px);
+    }
+}
+.welcome {
+    margin-bottom: 2rem;
+}
+.quiz-selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.quiz-card {
+    background-color: #f8f9fa;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.quiz-card h3 {
+    color: #007bff;
+}
+.quiz-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.quiz-card button:hover {
+    background-color: #0056b3;
+}
+
+.quiz-card  button a{
+    text-decoration: none;
+    color: white;
+}

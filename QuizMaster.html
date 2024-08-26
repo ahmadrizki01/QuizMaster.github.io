@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="QuizMaster.css">
+    <title>QuizMaster - Main Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">
+            <span>Q</span><span>u</span><span>i</span><span>z</span><span>M</span><span>a</span><span>s</span><span>t</span><span>e</span><span>r</span>
+        </h1>
+        <div class="welcome">
+            <h2>Welcome <span id="userEmail"></span></h2>
+            <p>Select a quiz to get started:</p>
+        </div>
+        <div class="quiz-selection">
+            <div class="quiz-card">
+                <h3>Math Quiz</h3>
+                <p>Test your mathematical skills</p>
+                <button onclick="startQuiz('math')"><a href="math.html">Start Quiz</a></button>
+            </div>
+            <div class="quiz-card">
+                <h3>Sports Quiz</h3>
+                <p>Challenge your sports knowledge</p>
+                <button onclick="startQuiz('sports')"><a href="Sport.html">Start Quiz</a></button>
+            </div>
+            <div class="quiz-card">
+                <h3>History Quiz</h3>
+                <p>Explore historical events</p>
+                <button onclick="startQuiz('history')"><a href="History.html">Start Quiz</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

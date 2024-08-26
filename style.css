@@ -1,0 +1,143 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+.logo-text {
+  font-size: 64px;
+  font-weight: bold;
+  color: #007bff;
+  position: relative;
+  overflow: hidden;
+}
+.logo-text span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.logo-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #007bff;
+  transition: width 0.5s ease;
+}
+.logo-container:hover .logo-text::after {
+  width: 100%;
+}
+.logo-container:hover .logo-text span {
+  animation: wave 0.3s ease-in-out infinite alternate;
+}
+@keyframes wave {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+.login-btn a{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+
+
+
+
+/* login page */
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#loginForm button a{
+  text-decoration: none;
+  color: white;
+}
+
+/* mainpage */
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.welcome {
+  margin-top: 2rem;
+  text-align: center;
+}
+.quiz-selection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.quiz-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1.5rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.quiz-card:hover {
+  transform: translateY(-5px);
+}
+.quiz-card h3 {
+  margin-top: 0;
+}
+.quiz-card button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+.quiz-card button:hover {
+  background-color: #0056b3;
+}
+
+.quiz-card button a{
+  text-decoration: none;
+  color: white;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
